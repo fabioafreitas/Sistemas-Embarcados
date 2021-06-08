@@ -22,7 +22,7 @@ int buf[10], temp;
 #define BODY_BUFFER_SIZE  (50)
 char body[BODY_BUFFER_SIZE];
 unsigned long lastMsg = 0;
-const char* ssid = "BBG_JOSELITO";
+const char* ssid = "BBG_JOSELITO2";
 const char* password = "Singularidade10";
 const char* http_server = "http://dojot-testes.duckdns.org:5000";
 
@@ -127,11 +127,12 @@ void sendJson(String uri) {
 
 
 void loop() {
-  unsigned long now = millis();
-  if (now - lastMsg > 3000) {
-    float phValue = read_ph();
-    float tempValue = read_temp();
-    snprintf(body, BODY_BUFFER_SIZE, "{\"temperature\":%f,\"ph\":%f}", tempValue, phValue);
-    sendJson("/ec94d3");
-  }                 
+  //unsigned long now = millis();
+  //if (now - lastMsg > 5000) {
+  delay(5000);
+  float phValue = read_ph();
+  float tempValue = read_temp();
+  snprintf(body, BODY_BUFFER_SIZE, "{\"temperature\":%f,\"ph\":%f}", tempValue, phValue);
+  sendJson("/ec94d3");
+  //}                 
 }

@@ -1,10 +1,14 @@
-void setup() {
-  pinMode(7, OUTPUT);
+const int transistor = 2;
+
+void setup()
+{
+  pinMode (transistor, OUTPUT);
 }
 
-void loop() {
-  digitalWrite(7, HIGH);
+void loop()
+{
+  digitalWrite (transistor, HIGH);
   delay(1000);
-  digitalWrite(7, LOW);
+  digitalWrite (transistor, LOW);
   delay(1000);
 }
