@@ -109,3 +109,4 @@ e este log deverá aparecer no servidor.
 ## Próximos passos
 
 fazer requisições POST e testar conexões com https
+[outros comandos AT](https://room-15.github.io/blog/2015/03/26/esp8266-at-command-reference/)
