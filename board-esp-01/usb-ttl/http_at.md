@@ -13,10 +13,10 @@ Entre no navegador e digite **localhost**, para ver se o servidor está funciona
 ## 2. Circuito elétrico do ESP-01 num USB TTL
 
 Monte o cirucito abaixo:
+
 ![](./images/circuit.jpg)
 
 Conecte o circuito ao USB do computador e abra o monitor serial do aduino. Configureo da seguinte maneira:
-
 
 ![](./images/monitor_serial.jpg)
 
@@ -32,6 +32,7 @@ OK
 baixar e instalar o [hterm](https://alternativeto.net/software/hterm/about/)
 
 configurar o hterm da seguinte forma:
+
 ![](./images/hterm.jpg)
 
 ## 4. Testando hterm
@@ -71,7 +72,7 @@ AT+CWQAP
 AT+CIFSR
 41 54 2b 43 49 46 53 52
 ```
-##  6. Enviando requisição HTTP
+##  6. Enviando requisição HTTP GET
 
 Uma vez conectado num wifi e com o servidor flask rodando, use os comandos abaixo.
 
@@ -82,6 +83,7 @@ AT+CIPSTART="TCP","192.168.0.100",80
 ```
 
 indicacao de que a conexao ocorreu com sucesso:
+
 ![](./images/conexao_tcp.jpg)
 
 6.2 O primeiro comando indica a quantidade de bytes a serem enviados ao servidor. Para requisições HTTP serem reconhecidas corretamente, elas precisam ter a sequência de bytes ao final do corpo da requisição TCP **0x0D 0X0A 0x0D 0X0A**. Sua requisição terá a quantidade de caracteres que julgar necessário + 4 bytes. Envie o AT abaixo indicando ao servidor quantos bytes ele deve esperar receber. No exemplo abaixo será enviado texto **GET / HTTP/1.1**, que possui 14 bytes, logo 14+4 equivalem a 18 bytes. Como na etapa 6.1, descobra seu comando HEX a partir do ASCII e execute-o no hterm.
@@ -91,6 +93,7 @@ AT+CIPSEND=18
 ```
 
 a saida experada é que apareça o >, simbolizando que o servidor está aguardando receber a quantidade de bytes que você indicou anteriormente
+
 ![](./images/enviar_bytes.jpg)
 
 
@@ -101,12 +104,25 @@ GET / HTTP/1.1\r\n\r\n
 ```
 
 se a requisição funcionar, este log irá aparecer no hterm.
+
 ![](./images/http_200.jpg)
 
 e este log deverá aparecer no servidor.
+
 ![](./images/http_200_2.jpg)
+
+## HTTP POST
+
+```
+AT+CIPSEND=23
+41 54 2b 43 49 50 53 45 4e 44 3d 31 38
+
+POST /post HTTP/1.1\r\n\r\n
+50 4f 53 54 20 2f 70 6f 73 74 20 48 54 54 50 2f 31 2e 31 0d 0a 0d 0a
+```
+
 
 ## Próximos passos
 
-fazer requisições POST e testar conexões com https
+
 [outros comandos AT](https://room-15.github.io/blog/2015/03/26/esp8266-at-command-reference/)
