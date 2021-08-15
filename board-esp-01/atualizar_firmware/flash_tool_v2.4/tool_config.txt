@@ -1,14 +1,14 @@
 path_data:
-choosed:C:\Users\fbioa\Desktop\CODIGOS\Arduino\board-esp-01\atualizar_firmware\firmware_ai_thinker\Ai-Thinker_ESP8266_DOUT_8Mbit_v1.5.4.1-a_20171130.bin;0X00000;
+empty:C:\Users\fbioa\Desktop\Arduino\board-esp-01\atualizar_firmware\firmware_ai_thinker\Ai-Thinker_ESP8266_DOUT_8Mbit_v1.5.4.1-a_20171130.bin;0X00000;
 empty:;;
 empty:;;
 empty:;;
 empty:;;
 empty:;;
 empty:;;
-default_path:C:\Users\fbioa\Desktop\CODIGOS\Arduino\board-esp-01\atualizar_firmware\firmware_ai_thinker;
+default_path:C:\Users\fbioa\Desktop\Arduino\board-esp-01\atualizar_firmware\firmware_ai_thinker;
 COM1:
-com_port1:3
+com_port1:4
 baudrate1:4
 COM2:
 com_port2:0
