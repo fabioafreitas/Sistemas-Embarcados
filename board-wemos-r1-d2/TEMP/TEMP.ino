@@ -3,13 +3,13 @@
 #include <OneWire.h>                
 #include <DallasTemperature.h>
 
-OneWire ourWire(D6);                //Se establece el pin 2  como bus OneWire
+OneWire ourWire(22);                //Se establece el pin 2  como bus OneWire
  
 DallasTemperature sensors(&ourWire); //Se declara una variable u objeto para nuestro sensor
 
 void setup() {
 delay(1000);
-Serial.begin(9600);
+Serial.begin(115200);
 sensors.begin();   //Se inicia el sensor
 }
  

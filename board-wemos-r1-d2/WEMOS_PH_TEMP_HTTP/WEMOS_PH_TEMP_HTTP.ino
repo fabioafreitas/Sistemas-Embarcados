@@ -1,12 +1,10 @@
-#include <OneWire.h>                
-#include <DallasTemperature.h>
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 
 
 
 // SENSOR VARIABLES
-OneWire ourWire(D8);                
+OneWire ourWire(D6);                
 DallasTemperature tempSensor(&ourWire);
 float calibration = 23.00;
 const int analogInPin = A0;
@@ -52,8 +50,8 @@ float read_ph() {
   avgValue += buf[i];
   float pHVol = (float)avgValue * 3.3 / 1024 / 6; //dividir por 3.3, pois estou usando um regulador de tensao 5v 3.3v
   float phValue = -5.70 * pHVol + calibration;
-  //Serial.print("PH = ");
-  //Serial.println(phValue);
+  Serial.print("PH = ");
+  Serial.println(phValue);
   return phValue;
 }
 
@@ -113,8 +111,9 @@ void setup() {
 
 void sendJson(String uri) {
   if (WiFi.status() == WL_CONNECTED) {
+    WiFiClient client;
     HTTPClient http;
-    http.begin(http_server+uri);
+    http.begin(client, http_server+uri);
     http.addHeader("Content-Type", "application/json");
     Serial.println(body);
     int httpCode = http.POST(body);
@@ -133,6 +132,6 @@ void loop() {
   float phValue = read_ph();
   float tempValue = read_temp();
   snprintf(body, BODY_BUFFER_SIZE, "{\"temperature\":%f,\"ph\":%f}", tempValue, phValue);
-  sendJson("/ec94d3");
+  //sendJson("/ec94d3");
   //}                 
 }
