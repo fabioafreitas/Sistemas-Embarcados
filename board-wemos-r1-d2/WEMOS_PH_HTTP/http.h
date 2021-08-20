@@ -2,7 +2,7 @@
 #include <ESP8266HTTPClient.h>
 
 // NETWORK VARIABLES
-const char* ssid = "Iot"; 
+const char* ssid = "iot"; 
 const char* password = "ufrpe_iot"; 
 const char* http_server = "http://dojot.fabiotest.online:5000";
 
