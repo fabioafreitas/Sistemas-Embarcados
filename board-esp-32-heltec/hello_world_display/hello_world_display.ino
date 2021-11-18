@@ -10,12 +10,7 @@ void setup() {
   Heltec.display->drawString(64, 22, "Joana");
   Heltec.display->drawString(64, 32, "Darc");
   Heltec.display->display();
-  pinMode(led, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(led, HIGH);
-  delay(1000);
-  digitalWrite(led, LOW);
-  delay(1000);
 }

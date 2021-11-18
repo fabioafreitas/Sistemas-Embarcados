@@ -1,4 +1,4 @@
-int pin = 8;
+int pin = 22;
 void setup() {
   pinMode(pin, OUTPUT);
 }

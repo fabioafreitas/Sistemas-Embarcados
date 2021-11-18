@@ -1,4 +1,0 @@
-{
-    "board": "arduino:avr:uno",
-    "sketch": "hello_world_display\\hello_world_display.ino"
-}

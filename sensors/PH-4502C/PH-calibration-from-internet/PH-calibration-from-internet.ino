@@ -29,6 +29,8 @@ void loop() {
   for (int i = 2; i < 8; i++)
   avgValue += buf[i];
   float pHVol = (float)avgValue * 5.0 / 1024 / 6;
+  Serial.print("PH volts = ");
+  Serial.print(pHVol);
   float phValue = -5.70 * pHVol + calibration;
   Serial.print("PH = ");
   Serial.println(phValue);
