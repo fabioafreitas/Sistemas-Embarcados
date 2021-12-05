@@ -1,3 +1,5 @@
+#include "Arduino.h"
+#include "heltec.h"
 #include <WiFi.h>          // Replace with WiFi.h for ESP32
 #include <WebServer.h>     // Replace with WebServer.h for ESP32
 #include <AutoConnect.h>
@@ -71,13 +73,9 @@ static const char DOJOT_SAVE[] PROGMEM = R"(
 }
 )";
 
-WebServer       server;
-AutoConnect     portal(server);
-AutoConnectAux  dojot_config;
-AutoConnectAux  dojot_save;
-
 String onLoad(AutoConnectAux& aux, PageArgument& args) {
-  //[TODO] carregar dados do EEPROM
+  //[TODO] salvar e carregar dados da Dojot na memória flash
+  
   aux["dojotServer"].as<AutoConnectInput>().value = "fabiotest.online";
   aux["deviceID"].as<AutoConnectInput>().value = "caf4f";
   return String();
@@ -95,9 +93,24 @@ String onSave(AutoConnectAux& aux, PageArgument& args) {
   return String();
 }
 
+WebServer         server;
+AutoConnect       portal(server);
+AutoConnectConfig config;
+AutoConnectAux    dojot_config;
+AutoConnectAux    dojot_save;
+
 void setup() {
+  Heltec.begin(false, false, true);
   Serial.begin(9600);
   delay(1000);
+
+  // Setting AP SSID and PASS
+  config.apid = "SmartRural_" + String((uint32_t)(ESP.getEfuseMac() >> 32), HEX);
+  config.psk  = "smartrural_iot";
+  //config.preserveAPMode = true;
+  portal.config(config);
+  
+  // Setting WebPages
   dojot_config.load(DOJOT_CONFIG);
   dojot_save.load(DOJOT_SAVE);
   portal.join({ dojot_config, dojot_save });
@@ -114,5 +127,6 @@ void loop() {
   if (now - lastMsg > 10000) {
     lastMsg = now;
     Serial.println(portal.getEEPROMUsedSize());
+    Serial.println("[AutoConnect] WiFi connected, IP - " + WiFi.localIP().toString() + ", SSID - " + WiFi.SSID());
   }
 }
