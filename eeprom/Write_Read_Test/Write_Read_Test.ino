@@ -29,15 +29,19 @@
  *  para evitar do dado salvo sobrescrever dados indevidos
  *  em posições não alocadas.
  */
-void saveStringInEEPROM(char* str, int address, int numReservedBytes) {
+void saveStringInEEPROM(String str, int address, int numReservedBytes) {
+  int len = str.length()+1;
+  char arr[len];
+  str.toCharArray(arr, len);
+  
   EEPROM.begin(EEPROM_SIZE);
   int initAddr = address;
   int finalAddr = address + numReservedBytes;
   
-  int len = strlen(str);
+  len = strlen(arr);
   Serial.println("-----------------------------------------------------------");
   if(len >= numReservedBytes) {
-    Serial.println(String("[EEPROM - ESCRITA] Erro: A string \"" + String(str) + "\" é muito grande, com " + len + " caracteres"));
+    Serial.println(String("[EEPROM - ESCRITA] Erro: A string \"" + String(arr) + "\" é muito grande, com " + len + " caracteres"));
     Serial.println(String("[EEPROM - ESCRITA] O length máximo permitido é de " + String(numReservedBytes-1) + ". O último espaço é reservado ao NULL TERMINATOR (ascii 0x0)"));
     EEPROM.end();
     return;
@@ -46,16 +50,16 @@ void saveStringInEEPROM(char* str, int address, int numReservedBytes) {
   // "Enquanto String não terminou ou não alcançou endereço final reservado, faça"
   // i <= strlen(deviceid), o <= serve para garantir que o null terminator da string seja salvo
   for (int i = 0; i <= len; i++) {
-    EEPROM.write(initAddr, str[i]);
+    EEPROM.write(initAddr, arr[i]);
     initAddr += sizeof(char);
   }
   
   bool saveStatus = EEPROM.commit();
   if(saveStatus) {
-    Serial.println(String("[EEPROM - ESCRITA] String \"" + String(str) + "\" salva com sucesso"));
+    Serial.println(String("[EEPROM - ESCRITA] String \"" + String(arr) + "\" salva com sucesso"));
   } 
   else {
-    Serial.println(String("[EEPROM - ESCRITA] Erro ao salvar a string \"" + String(str) + "\""));
+    Serial.println(String("[EEPROM - ESCRITA] Erro ao salvar a string \"" + String(arr) + "\""));
   }
   EEPROM.end();
 }
@@ -99,8 +103,8 @@ void setup() {
   Heltec.begin(false, false, true);
   Serial.begin(9600);
 
-  char server[] = "123456789012345678901234567801234567890a";
-  char deviceid[] = "cf2134";
+  String server = "123456789012345678901234567801234567890a";
+  String deviceid = "cf2134";
 
   saveStringInEEPROM(server, INIT_ADDRESS_SERVER, BYTES_SIZE_SERVER);
   saveStringInEEPROM(deviceid, INIT_ADDRESS_DEVICEID, BYTES_SIZE_DEVICEID);
