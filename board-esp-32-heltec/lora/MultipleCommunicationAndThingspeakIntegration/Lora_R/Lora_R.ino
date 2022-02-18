@@ -14,13 +14,13 @@ long lastSendTime = 0;        // last send time
 #define JSON_BUFFER_SIZE (300)
 char json[JSON_BUFFER_SIZE];
 
-/*
+
 const char* ssid = "iot";
 const char* password = "ufrpe_iot";
-*/
+/*
 const char* ssid = "BBGJOSELITO";
 const char* password = "Singularidade10";
-
+*/
 const char* hostname = "https://thingsboard.smartrural.com.br";
 const char* access_token = "D63C1pgDOirzveQOpg3K";
 String uri = String(hostname) + "/api/v1/" + String(access_token) + "/telemetry";
