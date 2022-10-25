@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:uno",
+    "sketch": "Dissolved_oxygen.ino",
+    "output": "./.vscode/ArduinoOutput"
+}
