@@ -1,0 +1,7 @@
+{
+    "board": "esp32:esp32:esp32wrover",
+    "sketch": "Dissolved_oxygen_tcall.ino",
+    "output": "./.vscode/ArduinoOutput",
+    "configuration": "PartitionScheme=default,FlashMode=qio,FlashFreq=80,UploadSpeed=921600,DebugLevel=none",
+    "port": "COM20"
+}
