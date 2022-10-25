@@ -1,0 +1,97 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\fbioa\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.3\\cores\\esp32"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\fbioa\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.3\\variants\\esp32"
+  },
+  {
+    "Sourcefile": "c:\\Users\\fbioa\\Desktop\\Dissolved_oxygen_tcall\\.vscode\\ArduinoOutput\\sketch\\Dissolved_oxygen_tcall.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "C:\\Users\\fbioa\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.3\\libraries\\Wire\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\fbioa\\Desktop\\Dissolved_oxygen_tcall\\.vscode\\ArduinoOutput\\sketch\\Dissolved_oxygen_tcall.ino.cpp",
+    "Include": "axp20x.h",
+    "Includepath": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\AXP202X_Library\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\fbioa\\Desktop\\Dissolved_oxygen_tcall\\.vscode\\ArduinoOutput\\sketch\\Dissolved_oxygen_tcall.ino.cpp",
+    "Include": "OneWire.h",
+    "Includepath": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\OneWire"
+  },
+  {
+    "Sourcefile": "c:\\Users\\fbioa\\Desktop\\Dissolved_oxygen_tcall\\.vscode\\ArduinoOutput\\sketch\\Dissolved_oxygen_tcall.ino.cpp",
+    "Include": "DallasTemperature.h",
+    "Includepath": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\DallasTemperature"
+  },
+  {
+    "Sourcefile": "c:\\Users\\fbioa\\Desktop\\Dissolved_oxygen_tcall\\.vscode\\ArduinoOutput\\sketch\\Dissolved_oxygen_tcall.ino.cpp",
+    "Include": "Adafruit_ADS1X15.h",
+    "Includepath": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\Adafruit_ADS1X15"
+  },
+  {
+    "Sourcefile": "c:\\Users\\fbioa\\Desktop\\Dissolved_oxygen_tcall\\.vscode\\ArduinoOutput\\sketch\\Dissolved_oxygen_tcall.ino.cpp",
+    "Include": "Adafruit_I2CDevice.h",
+    "Includepath": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\Adafruit_BusIO"
+  },
+  {
+    "Sourcefile": "c:\\Users\\fbioa\\Desktop\\Dissolved_oxygen_tcall\\.vscode\\ArduinoOutput\\sketch\\Dissolved_oxygen_tcall.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\fbioa\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.3\\libraries\\Wire\\src\\Wire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\AXP202X_Library\\src\\axp20x.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\OneWire\\OneWire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\DallasTemperature\\DallasTemperature.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\Adafruit_ADS1X15\\Adafruit_ADS1X15.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_BusIO_Register.cpp",
+    "Include": "SPI.h",
+    "Includepath": "C:\\Users\\fbioa\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.3\\libraries\\SPI\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_BusIO_Register.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_I2CDevice.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_SPIDevice.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\fbioa\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.3\\libraries\\SPI\\src\\SPI.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]
