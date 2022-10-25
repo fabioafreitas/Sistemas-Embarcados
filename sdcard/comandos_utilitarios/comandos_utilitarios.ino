@@ -16,7 +16,7 @@
    https://www.mischianti.org
 */
 // include the SD library:
-
+#include "heltec.h"
 #include <SPI.h>
 #include <SD.h>
  
@@ -26,6 +26,11 @@ const int chipSelect = SS;
 void printDirectory(File dir, int numTabs);
  
 void setup() {
+    pinMode(LED,OUTPUT);
+  digitalWrite(LED,HIGH);
+
+  Heltec.begin(true /*DisplayEnable Enable*/, false /*LoRa Enable*/, true /*Serial Enable*/);
+
   delay(3000);
 
   
@@ -41,7 +46,7 @@ void setup() {
   // we'll use the initialization code from the utility libraries
   // since we're just testing if the card is working!
   //if (!SD.begin(SS)) {
-  int custom_cs_pin = 5; //o default é o gpio 5
+  int custom_cs_pin = 2; //o default é o gpio 5
   if (!SD.begin(custom_cs_pin)) {
     Serial.println("initialization failed. Things to check:");
     Serial.println("* is a card inserted?");
