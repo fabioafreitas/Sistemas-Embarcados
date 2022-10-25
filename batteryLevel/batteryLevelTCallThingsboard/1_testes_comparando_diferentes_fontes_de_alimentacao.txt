@@ -1,0 +1,15 @@
+bateria com 97% de carga
+
+usb computador = 	97%
+alimentação ext = 	89%
+diferença = 8%
+
+-------------------
+batatia com 67% de carga
+
+usb computador = 	67%
+alimentação ext = 	58%%
+diferença = 9%
+
+-------------------
+diferença ~ 8.5%

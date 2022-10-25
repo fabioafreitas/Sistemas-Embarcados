@@ -1,11 +1,15 @@
 //#include "Arduino.h"
 //#include "heltec.h"
+#define TINY_GSM_MODEM_SIM800
+
 #include <SoftwareSerial.h>
 
 #define RXD2 16
 #define TXD2 17
 
-SoftwareSerial mySerial(10, 11);  //RX,TX
+#define LED_BUILTIN 13
+
+SoftwareSerial mySerial(26, 27);  //RX,TX
 
 void setup() {
     //Heltec.begin(false /*Display*/, false /*LoRa*/, true /*Serial*/);

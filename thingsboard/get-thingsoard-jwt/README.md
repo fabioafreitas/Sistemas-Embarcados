@@ -1,0 +1,1 @@
+TODO : O código getJwt() ainda não é capaz de pegar o jwt independente da posição da sua key no json. Funcionalidade a ser implementada futuramente
