@@ -6,8 +6,8 @@
 
 #define JSON_BUFFER_SIZE (300)
 char json[JSON_BUFFER_SIZE];
-const char* hostname = "http://thingsboard.smartrural.com.br";
-String accessToken = "c37vb55nNVHiCYlLgMaP";
+const char* hostname = "https://thingsboard.cloud";
+String accessToken = "7MfjJHnwX1LD4FjOmIbw";
 
 // return true of http code is 200, false if not
 bool sendHttpToServer(float current, float power) {
@@ -15,24 +15,12 @@ bool sendHttpToServer(float current, float power) {
   Serial.println("-----------------------------------------------------------");
   #endif
   if(WiFi.status()== WL_CONNECTED){
-    String wifi_ssid = WiFi.SSID();
-    int len = wifi_ssid.length()+1;
-    char wifi_ssid_buffer[len];
-    wifi_ssid.toCharArray(wifi_ssid_buffer, len);
-    
-    String ip = WiFi.localIP().toString();
-    len = ip.length()+1;
-    char ip_buffer[len];
-    ip.toCharArray(ip_buffer, len);
-    
     snprintf (json, JSON_BUFFER_SIZE, \
       "{" \
         "\"current\":%3.3f," \
-        "\"power\":%i," \
-        "\"ssid\":\"%s\"," \
-        "\"ip\":\"%s\""
+        "\"power\":%3.3f" \
       "}", \
-      current, power, wifi_ssid_buffer, ip_buffer);
+      current, power);
 
     // requisição http post
     HTTPClient http;

@@ -4,7 +4,7 @@
 #include "http.h"
 
 #define uS_TO_S_FACTOR 1000000ULL  /* Conversion factor for micro seconds to seconds */
-#define DEEP_SLEEP_TIME  60        /* Time ESP32 will go to sleep (in seconds) */
+#define DEEP_SLEEP_TIME  1        /* Time ESP32 will go to sleep (in seconds) */
 
 void setup() {
   esp_sleep_enable_timer_wakeup(DEEP_SLEEP_TIME * uS_TO_S_FACTOR);
@@ -17,7 +17,9 @@ void setup() {
 
   initWiFi();
 
-  bool httpSuccess = sendHttpToServer(42, 24);
+  int current = random(20,30);
+  int power = random(10,20);
+  bool httpSuccess = sendHttpToServer(current, power);
 
   #ifdef DEBUG_MODE
   Serial.println("[DEEP SLEEP] Going to sleep!");
