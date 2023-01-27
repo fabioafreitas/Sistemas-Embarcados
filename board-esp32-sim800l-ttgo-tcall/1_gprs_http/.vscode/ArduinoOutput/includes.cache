@@ -1,0 +1,42 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\fbioa\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.3\\cores\\esp32"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\fbioa\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.3\\variants\\esp32"
+  },
+  {
+    "Sourcefile": "c:\\Users\\fbioa\\Desktop\\dev\\firmware-mestrado\\test-scripts\\1_gprs_http\\.vscode\\ArduinoOutput\\sketch\\1_gprs_http.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "C:\\Users\\fbioa\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.3\\libraries\\Wire\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\fbioa\\Desktop\\dev\\firmware-mestrado\\test-scripts\\1_gprs_http\\.vscode\\ArduinoOutput\\sketch\\1_gprs_http.ino.cpp",
+    "Include": "axp20x.h",
+    "Includepath": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\AXP202X_Library\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\fbioa\\Desktop\\dev\\firmware-mestrado\\test-scripts\\1_gprs_http\\.vscode\\ArduinoOutput\\sketch\\1_gprs_http.ino.cpp",
+    "Include": "TinyGsmClient.h",
+    "Includepath": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\TinyGSM\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\fbioa\\Desktop\\dev\\firmware-mestrado\\test-scripts\\1_gprs_http\\.vscode\\ArduinoOutput\\sketch\\1_gprs_http.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\fbioa\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.3\\libraries\\Wire\\src\\Wire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\fbioa\\OneDrive\\Documentos\\Arduino\\libraries\\AXP202X_Library\\src\\axp20x.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]

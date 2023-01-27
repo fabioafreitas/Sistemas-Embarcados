@@ -5,7 +5,7 @@
 
 #include <WiFi.h>
 
-String ssid = "iot";
+String ssid = "iot3";
 String pass = "ufrpe_iot";
 
 // Initialize WiFi
