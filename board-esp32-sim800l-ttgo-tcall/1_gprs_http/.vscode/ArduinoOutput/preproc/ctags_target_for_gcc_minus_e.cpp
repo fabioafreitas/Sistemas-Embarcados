@@ -1,8 +1,8 @@
-# 1 "c:\\Users\\fbioa\\Desktop\\dev\\firmware-mestrado\\test-scripts\\1_gprs_http\\1_gprs_http.ino"
+# 1 "c:\\Users\\fbioa\\Desktop\\dev\\Arduino\\board-esp32-sim800l-ttgo-tcall\\1_gprs_http\\1_gprs_http.ino"
 
 
-# 4 "c:\\Users\\fbioa\\Desktop\\dev\\firmware-mestrado\\test-scripts\\1_gprs_http\\1_gprs_http.ino" 2
-# 5 "c:\\Users\\fbioa\\Desktop\\dev\\firmware-mestrado\\test-scripts\\1_gprs_http\\1_gprs_http.ino" 2
+# 4 "c:\\Users\\fbioa\\Desktop\\dev\\Arduino\\board-esp32-sim800l-ttgo-tcall\\1_gprs_http\\1_gprs_http.ino" 2
+# 5 "c:\\Users\\fbioa\\Desktop\\dev\\Arduino\\board-esp32-sim800l-ttgo-tcall\\1_gprs_http\\1_gprs_http.ino" 2
 
 //#define TEST_HTTP_GET
 
@@ -18,8 +18,8 @@ const char gprsPass[] = "vivo"; // GPRS Password
 const char simPIN[] = "";
 
 // Server details
-const char server[] = "712d-200-17-137-180.sa.ngrok.io"; // domain name: example.com
-const char resource[] = "/"; // resource path, for example: /post-data.php
+const char server[] = "thingsboard.cloud"; // domain name: example.com
+const char resource[] = "/api/v1/1bd1ETvQY5WCEmeWPs4E/telemetry"; // resource path, for example: /post-data.php
 const int port = 80;
 
 
@@ -35,8 +35,8 @@ const int port = 80;
 // Define the serial console for debug prints, if needed
 //#define DUMP_AT_COMMANDS
 
-# 38 "c:\\Users\\fbioa\\Desktop\\dev\\firmware-mestrado\\test-scripts\\1_gprs_http\\1_gprs_http.ino" 2
-# 39 "c:\\Users\\fbioa\\Desktop\\dev\\firmware-mestrado\\test-scripts\\1_gprs_http\\1_gprs_http.ino" 2
+# 38 "c:\\Users\\fbioa\\Desktop\\dev\\Arduino\\board-esp32-sim800l-ttgo-tcall\\1_gprs_http\\1_gprs_http.ino" 2
+# 39 "c:\\Users\\fbioa\\Desktop\\dev\\Arduino\\board-esp32-sim800l-ttgo-tcall\\1_gprs_http\\1_gprs_http.ino" 2
 
 
 
@@ -74,8 +74,8 @@ void setup() {
   // Restart SIM800 module, it takes quite some time
   // To skip it, call init() instead of restart()
   Serial.println("Initializing modem...");
-  modem.restart();
-  //modem.init(); // if you don't need the complete restart
+  //modem.restart();
+  modem.init(); // if you don't need the complete restart
 
   // Unlock your SIM card with a PIN if needed
   if (strlen(simPIN) && modem.getSimStatus() != 3 ) {
@@ -104,9 +104,9 @@ void loop() {
   }
 
     Serial.println(" OK");
-# 114 "c:\\Users\\fbioa\\Desktop\\dev\\firmware-mestrado\\test-scripts\\1_gprs_http\\1_gprs_http.ino"
+# 114 "c:\\Users\\fbioa\\Desktop\\dev\\Arduino\\board-esp32-sim800l-ttgo-tcall\\1_gprs_http\\1_gprs_http.ino"
     Serial.println("Performing HTTP POST request...");
-    String httpRequestData = "{\"test\":\"post\"}";
+    String httpRequestData = "{\"voltage\":5}";
     client.print(String("POST ") + resource + " HTTP/1.1\r\n");
     client.print(String("Host: ") + server + "\r\n");
     client.println("Content-Type: application/json");

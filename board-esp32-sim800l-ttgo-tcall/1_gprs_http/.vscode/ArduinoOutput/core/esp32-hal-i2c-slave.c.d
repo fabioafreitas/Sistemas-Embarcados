@@ -1,4 +1,4 @@
-c:\Users\fbioa\Desktop\dev\firmware-mestrado\test-scripts\1_gprs_http\.vscode\ArduinoOutput\core\esp32-hal-i2c-slave.c.o: \
+c:\Users\fbioa\Desktop\dev\Arduino\board-esp32-sim800l-ttgo-tcall\1_gprs_http\.vscode\ArduinoOutput\core\esp32-hal-i2c-slave.c.o: \
  C:\Users\fbioa\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.3\cores\esp32\esp32-hal-i2c-slave.c \
  C:\Users\fbioa\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.3/tools/sdk/esp32/include/esp_common/include/esp_attr.h \
  C:\Users\fbioa\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.3/tools/sdk/esp32/include/esp_rom/include/esp32/rom/gpio.h \

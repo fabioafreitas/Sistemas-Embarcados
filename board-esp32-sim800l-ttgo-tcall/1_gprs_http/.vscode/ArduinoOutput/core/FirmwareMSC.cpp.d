@@ -1,4 +1,4 @@
-c:\Users\fbioa\Desktop\dev\firmware-mestrado\test-scripts\1_gprs_http\.vscode\ArduinoOutput\core\FirmwareMSC.cpp.o: \
+c:\Users\fbioa\Desktop\dev\Arduino\board-esp32-sim800l-ttgo-tcall\1_gprs_http\.vscode\ArduinoOutput\core\FirmwareMSC.cpp.o: \
  C:\Users\fbioa\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.3\cores\esp32\FirmwareMSC.cpp \
  C:\Users\fbioa\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.3\cores\esp32\FirmwareMSC.h \
  C:\Users\fbioa\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.3\cores\esp32\USBMSC.h \

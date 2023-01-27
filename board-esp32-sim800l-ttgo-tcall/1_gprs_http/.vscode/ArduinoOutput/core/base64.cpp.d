@@ -1,4 +1,4 @@
-c:\Users\fbioa\Desktop\dev\firmware-mestrado\test-scripts\1_gprs_http\.vscode\ArduinoOutput\core\base64.cpp.o: \
+c:\Users\fbioa\Desktop\dev\Arduino\board-esp32-sim800l-ttgo-tcall\1_gprs_http\.vscode\ArduinoOutput\core\base64.cpp.o: \
  C:\Users\fbioa\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.3\cores\esp32\base64.cpp \
  C:\Users\fbioa\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.3\cores\esp32\Arduino.h \
  C:\Users\fbioa\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.3\cores\esp32\esp_arduino_version.h \
