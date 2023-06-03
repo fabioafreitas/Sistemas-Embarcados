@@ -16,8 +16,7 @@
 // Set serial for AT commands (to the module)
 #define SerialAT  Serial1
 
-void setupModem()
-{
+void setupModem() {
 #ifdef MODEM_RST
     // Keep reset high
     pinMode(MODEM_RST, OUTPUT);
